@@ -1,94 +1,131 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ca">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[Nom del teu restaurant]</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ramen Ramón</title>
     <!-- Google Fonts aquí -->
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <!-- HEADER amb navegació -->
     <header>
-        <nav>
-            <div class="logo">[Nom Restaurant]</div>
-            <ul class="nav-menu">
-                <li><a href="#inici">Inici</a></li>
-                <li><a href="#sobre-nosaltres">Sobre nosaltres</a></li>
-                <li><a href="#menu">Menú</a></li>
-                <li><a href="#reserva">Reserva</a></li>
-            </ul>
-        </nav>
+      <nav>
+        <div class="logo">
+          <img src="images/ramen.jpeg" alt="Ramen Ramón" />
+        </div>
+        <ul class="nav-menu">
+          <li><a href="#inici">Inici</a></li>
+          <li><a href="#sobre-nosaltres">Sobre nosaltres</a></li>
+          <li><a href="#menu">Menú</a></li>
+          <li><a href="#reserva">Reserva</a></li>
+        </ul>
+      </nav>
     </header>
 
     <!-- HERO SECTION -->
     <section id="inici" class="hero">
-        <h1>[Slogan del restaurant]</h1>
-        <p>[Descripció breu]</p>
-        <a href="#reserva" class="btn-primary">Reserva ara</a>
+      <h1>Ramen Ramón — menja’t el ramen i no et facis mamón.</h1>
+      <p>
+        Bon ramen, bons ingredients i zero xorrades. Seu, demana i fot-li canya
+        al bol.
+      </p>
+      <a href="#reserva" class="btn-primary">Reserva ara</a>
     </section>
 
     <!-- SOBRE NOSALTRES -->
     <section id="sobre-nosaltres" class="about">
-        <h2>Sobre nosaltres</h2>
-        <p>[Text sobre la història/filosofia del restaurant]</p>
+      <h2>Sobre nosaltres</h2>
+      <p>
+        <strong>Ramen Ramón</strong> es un petit restaurant de ramen situat al
+        cor de Miravet, un poble on trobar un bon bol de ramen japonès no era
+        precisament el més habitual.
+        <br />
+        En Ramón va néixer aquí, però quan era petit va marxar a viure al Japó
+        després de ser adoptat per una família japonesa. Allà va creixer
+        envoltat de la cultura del ramen gràcies al seu pare adoptiu, en
+        Takeshi, un autentic mestre dels caldos i els fideus. Amb els anys, en
+        Ramón va aprendre tots els secrets del ramen i va acabar convertint
+        aquella afició en la seva passió.
+        <br />
+        Durant la seva etapa al Japó també va coneixer la Yuki, la seva dona,
+        amb qui va compartir anys entre cuines, bols de ramen i moltes hores
+        preparant receptes. Després de molt temps vivint al Japó, els dos van
+        decidir tornar al poble d'en Ramón i començar una nova etapa.
+        <br />
+        Quan van arribar a Miravet, en Ramón es va adonar d'una cosa molt
+        senzilla: no hi havia cap lloc on poder menjar un bon ramen. I, com que
+        esperar que algú altre ho soluciones no era gaire el seu estil, va
+        pensar: "Doncs ja el faré jo,collons".
+        <br />
+        I així va néixer Ramen Ramón.
+        <br />
+        La nostra idea és portar el millor del ramen japonès al nostre petit
+        racó de Catalunya, combinant les receptes i tècniques que en Ramón va
+        aprendre al Japó amb ingredients, gustos i una mica del caràcter català.
+        Tot això en un ambient proper, tranquil i sense massa formalitats.
+        <br />
+        Aqui venim a menjar bé, a passar una bona estona i, sobretot, a gaudir
+        d'un bon bol de ramen. Sense xorrades, sense complicacions i amb molt
+        bon rotllo.
+      </p>
     </section>
 
     <!-- DESTACATS DEL MENÚ -->
     <section id="menu" class="menu-highlight">
-        <h2>Els nostres plats</h2>
-        <div class="dishes">
-            <div class="dish-card">
-                <h3>[Nom plat 1]</h3>
-                <p>[Descripció]</p>
-                <span class="price">[Preu]€</span>
-            </div>
-            <div class="dish-card">
-                <h3>[Nom plat 2]</h3>
-                <p>[Descripció]</p>
-                <span class="price">[Preu]€</span>
-            </div>
-            <div class="dish-card">
-                <h3>[Nom plat 3]</h3>
-                <p>[Descripció]</p>
-                <span class="price">[Preu]€</span>
-            </div>
+      <h2>Els nostres plats</h2>
+      <div class="dishes">
+        <div class="dish-card">
+          <h3>[Nom plat 1]</h3>
+          <p>[Descripció]</p>
+          <span class="price">[Preu]€</span>
         </div>
+        <div class="dish-card">
+          <h3>[Nom plat 2]</h3>
+          <p>[Descripció]</p>
+          <span class="price">[Preu]€</span>
+        </div>
+        <div class="dish-card">
+          <h3>[Nom plat 3]</h3>
+          <p>[Descripció]</p>
+          <span class="price">[Preu]€</span>
+        </div>
+      </div>
     </section>
 
     <!-- FORMULARI DE RESERVA -->
     <section id="reserva" class="reservation">
-        <h2>Reserva la teva taula</h2>
-        <form>
-            <label for="name">Nom complet</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="date">Data</label>
-            <input type="date" id="date" name="date" required>
-            
-            <label for="time">Hora</label>
-            <input type="time" id="time" name="time" required>
-            
-            <label for="guests">Número de persones</label>
-            <select id="guests" name="guests">
-                <option value="1">1 persona</option>
-                <option value="2">2 persones</option>
-                <option value="3">3 persones</option>
-                <option value="4">4 persones</option>
-                <option value="5">5+ persones</option>
-            </select>
-            
-            <button type="submit" class="btn-primary">Confirmar reserva</button>
-        </form>
+      <h2>Reserva la teva taula</h2>
+      <form>
+        <label for="name">Nom complet</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="date">Data</label>
+        <input type="date" id="date" name="date" required />
+
+        <label for="time">Hora</label>
+        <input type="time" id="time" name="time" required />
+
+        <label for="guests">Número de persones</label>
+        <select id="guests" name="guests">
+          <option value="1">1 persona</option>
+          <option value="2">2 persones</option>
+          <option value="3">3 persones</option>
+          <option value="4">4 persones</option>
+          <option value="5">5+ persones</option>
+        </select>
+
+        <button type="submit" class="btn-primary">Confirmar reserva</button>
+      </form>
     </section>
 
     <!-- FOOTER -->
     <footer>
-        <p>&copy; 2024 [Nom Restaurant]. Tots els drets reservats.</p>
-        <p>Adreça: [Carrer fictici] | Tel: [Telèfon fictici]</p>
+      <p>&copy; 2024 [Nom Restaurant]. Tots els drets reservats.</p>
+      <p>Adreça: [Carrer fictici] | Tel: [Telèfon fictici]</p>
     </footer>
-</body>
+  </body>
 </html>
