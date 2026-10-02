@@ -1,7 +1,7 @@
 /* ============================================
    ACTIVITAT 2: ESTILITZACIÓ AMB CSS
-   Nom: 
-   Restaurant: 
+   Nom: Ramen Ramon
+   Restaurant: Ramen
    ============================================ */
 
 /* ============================================
@@ -12,42 +12,93 @@
 :root {
   /* Afegeix aquí les teves variables CSS */
   /* Colors principals (exemple de com crear les variables) */
-  --primary-color: #______;      /* Color principal del restaurant */
-  --secondary-color: #______;    /* Color secundari (botons, accents) */
-  --accent-color: #______;       /* Color d'accent (links, highlights) */
+  --primary-color: #c3423f; /* Color principal del restaurant */
+  --secondary-color: #fcf2d7; /* Color secundari (botons, accents) */
+  --accent-color: #fbaf00; /* Color d'accent (links, highlights) */
+  --background-color: #e3e3e3; /*Color del fons*/
+  --text: black;
 }
-
 
 /* ============================================
    RESET I ESTILS GENERALS
    ============================================ */
 
 /* Afegeix aquí el reset bàsic i estils del body */
-
-
+/*Reset: serviex per treure els estils que el navegador posa automaticament en HTML*/
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background-color: var(--background-color);
+  color: var(--text);
+  font-family: "Nunito Sans", sans-serif;
+}
 /* ============================================
    TIPOGRAFIA
    ============================================ */
-    /*Exemple de com fer anar les variables*/
-   h1{ 
-    color: var(--primary-color);
-   }
-
+/*Exemple de com fer anar les variables*/
 /* Afegeix aquí els estils per h1, h2, h3, p, etc. */
-
+h1,
+h2,
+h3 {
+  color: var(--primary-color);
+  font-family: "Bebas Neue", sans-serif;
+}
 
 /* ============================================
    NAVEGACIÓ
    ============================================ */
 
 /* Afegeix aquí els estils del header i nav */
-
+header {
+  background-color: var(--secondary-color);
+  padding: 15px 40px;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.nav-menu{
+   display: flex;
+   list-style: none;
+   gap: 30px;
+   margin: 0;
+   padding: 0;
+}
+.nav-menu a{
+   color: var(--text);
+   text-decoration: none;
+   font-weight: bold;
+}
+.nav-menu a:hover{
+   color: var(--accent-color);
+}
+.logo img {
+   width: 120px;
+   height: auto;
+   display: block;
+}
 
 /* ============================================
    HERO SECTION
    ============================================ */
 
 /* Afegeix aquí els estils de la secció hero */
+.hero{
+   padding: 100px 20px;
+   text-align: center;
+}
+.hero h1{
+   margin:0 0 20px;
+   font-size: 4rem;
+}
 
 
 /* ============================================
@@ -55,14 +106,25 @@
    ============================================ */
 
 /* Afegeix aquí els estils dels botons */
-
+.btn-primary{
+   display: inline-block;
+   padding: 12px 24px;
+   background-color: var(--primary-color);
+   text-decoration: none;
+   color: var(--text);
+}
+.btn-primary:hover{
+   color: var(--accent-color);
+}
 
 /* ============================================
    SECCIÓ SOBRE NOSALTRES
    ============================================ */
 
 /* Afegeix aquí els estils de .about */
-
+.about {
+   padding: 80px 20px;
+}
 
 /* ============================================
    DESTACATS DEL MENÚ
@@ -70,13 +132,11 @@
 
 /* Afegeix aquí els estils de .menu-highlight i .dish-card */
 
-
 /* ============================================
    FORMULARI DE RESERVA
    ============================================ */
 
 /* Afegeix aquí els estils del formulari */
-
 
 /* ============================================
    FOOTER
