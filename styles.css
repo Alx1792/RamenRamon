@@ -12,11 +12,14 @@
 :root {
   /* Afegeix aquí les teves variables CSS */
   /* Colors principals (exemple de com crear les variables) */
-  --primary-color: #c3423f; /* Color principal del restaurant */
-  --secondary-color: #fcf2d7; /* Color secundari (botons, accents) */
-  --accent-color: #fbaf00; /* Color d'accent (links, highlights) */
-  --background-color: #e3e3e3; /*Color del fons*/
-  --text: black;
+  --primary-color: #8f1d1d;
+  --secondary-color: #fcf2d7;
+  --accent-color: #c49a00;
+  --background-color: #f7e9c5;
+  --text: #1d1d1d;
+  --surface-color: #fff8e8;
+  --dark-red: #611010;
+  --white: #ffffff;
 }
 
 /* ============================================
@@ -36,6 +39,7 @@ body {
   background-color: var(--background-color);
   color: var(--text);
   font-family: "Nunito Sans", sans-serif;
+  line-height: 1.6;
 }
 /* ============================================
    TIPOGRAFIA
@@ -48,6 +52,12 @@ h3 {
   color: var(--primary-color);
   font-family: "Bebas Neue", sans-serif;
 }
+h2 {
+  font-size: 2.5rem;
+}
+h3 {
+  font-size: 1.8rem;
+}
 
 /* ============================================
    NAVEGACIÓ
@@ -57,6 +67,7 @@ h3 {
 header {
   background-color: var(--secondary-color);
   padding: 15px 40px;
+  border-bottom: 4px solid var(--primary-color);
 }
 nav {
   display: flex;
@@ -65,25 +76,26 @@ nav {
   max-width: 1200px;
   margin: 0 auto;
 }
-.nav-menu{
-   display: flex;
-   list-style: none;
-   gap: 30px;
-   margin: 0;
-   padding: 0;
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
 }
-.nav-menu a{
-   color: var(--text);
-   text-decoration: none;
-   font-weight: bold;
+.nav-menu a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: bold;
 }
-.nav-menu a:hover{
-   color: var(--accent-color);
+.nav-menu a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
 }
 .logo img {
-   width: 120px;
-   height: auto;
-   display: block;
+  width: 120px;
+  height: auto;
+  display: block;
 }
 
 /* ============================================
@@ -91,30 +103,33 @@ nav {
    ============================================ */
 
 /* Afegeix aquí els estils de la secció hero */
-.hero{
-   padding: 100px 20px;
-   text-align: center;
+.hero {
+  padding: 100px 20px;
+  text-align: center;
 }
-.hero h1{
-   margin:0 0 20px;
-   font-size: 4rem;
+.hero h1 {
+  margin: 0 0 20px;
+  font-size: 4rem;
 }
-
 
 /* ============================================
    BOTONS
    ============================================ */
 
 /* Afegeix aquí els estils dels botons */
-.btn-primary{
-   display: inline-block;
-   padding: 12px 24px;
-   background-color: var(--primary-color);
-   text-decoration: none;
-   color: var(--text);
+.btn-primary {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--primary-color);
+  text-decoration: none;
+  color: var(--text);
+  border-radius: 8px;
+  font-weight: bold;
 }
-.btn-primary:hover{
-   color: var(--accent-color);
+.btn-primary:hover {
+  background-color: var(--dark-red);
+  border-color: var(--dark-red);
+  color: var(--white);
 }
 
 /* ============================================
@@ -123,7 +138,11 @@ nav {
 
 /* Afegeix aquí els estils de .about */
 .about {
-   padding: 80px 20px;
+  padding: 80px 20px;
+  text-align: center;
+}
+.about p {
+  margin: 20px 0 0;
 }
 
 /* ============================================
@@ -131,15 +150,55 @@ nav {
    ============================================ */
 
 /* Afegeix aquí els estils de .menu-highlight i .dish-card */
+.menu-highlight {
+  padding: 80px 20px;
+  text-align: center;
+}
+.dishes {
+  display: flex;
+  gap: 20px;
+}
+.dish-card {
+  flex: 1;
+  background-color: var(--secondary-color);
+  padding: 25px;
+  border-radius: 10px;
+}
+.price {
+  font-weight: bold;
+  color: var(--accent-color);
+}
 
 /* ============================================
    FORMULARI DE RESERVA
    ============================================ */
 
 /* Afegeix aquí els estils del formulari */
-
+.reservation {
+  padding: 80px 20px;
+  text-align: center;
+}
+.reservation form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.reservation label {
+  display: block;
+}
+.reservation input,
+.reservation select {
+  width: 100%;
+  padding: 7px;
+  margin-bottom: 15px;
+}
 /* ============================================
    FOOTER
    ============================================ */
 
 /* Afegeix aquí els estils del footer */
+footer {
+  background-color: var(--primary-color);
+  padding: 10px 20px;
+  text-align: center;
+  color: var(--secondary-color);
+}
