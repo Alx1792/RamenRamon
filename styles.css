@@ -20,6 +20,7 @@
   --text-color: #1D1D1D;
   --dark-color: #611010;
   --white: #FFFFFF;
+ 
 }
 
 
@@ -35,6 +36,9 @@
 
 html {
   scroll-behavior: smooth;
+}
+section {
+  scroll-margin-top: 100px;
 }
 
 body {
@@ -72,6 +76,15 @@ h1 {
 h2 {
   font-size: 3rem;
   margin-bottom: 25px;
+}
+h2::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 4px;
+  margin: 8px auto 0;
+  background-color: var(--primary-color);
+  border-radius: 2px;
 }
 
 h3 {
@@ -142,7 +155,7 @@ nav {
   min-height: 600px;
   padding: 100px 20px;
   text-align: center;
-  background-color: var(--background-color);
+  background-color: var(--surface-color);
 
   display: flex;
   flex-direction: column;
@@ -185,6 +198,7 @@ nav {
 .btn-primary:hover {
   background-color: var(--dark-color);
   border-color: var(--dark-color);
+  transform: translateY(-2px);
 }
 
 
@@ -209,6 +223,7 @@ nav {
   text-align: left;
   background-color: var(--surface-color);
   border-left: 6px solid var(--accent-color);
+  border-right: 6px solid var(--primary-color);
   border-radius: 10px;
   line-height: 1.8;
 }
