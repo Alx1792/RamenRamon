@@ -20,7 +20,6 @@
   --text-color: #1D1D1D;
   --dark-color: #611010;
   --white: #FFFFFF;
- 
 }
 
 
@@ -36,9 +35,6 @@
 
 html {
   scroll-behavior: smooth;
-}
-section {
-  scroll-margin-top: 100px;
 }
 
 body {
@@ -64,31 +60,25 @@ h1,
 h2,
 h3 {
   font-family: "Bebas Neue", sans-serif;
-  color: var(--primary-color);
   margin-top: 0;
+  color: var(--primary-color);
+  letter-spacing: 1px;
 }
 
 h1 {
-  font-size: 4.5rem;
-  line-height: 1.1;
+  font-size: 5rem;
+  line-height: 1;
 }
 
 h2 {
-  font-size: 3rem;
-  margin-bottom: 25px;
-}
-h2::after {
-  content: "";
-  display: block;
-  width: 90px;
-  height: 4px;
-  margin: 8px auto 0;
-  background-color: var(--primary-color);
-  border-radius: 2px;
+  font-size: 3.5rem;
+  line-height: 1;
+  margin-bottom: 40px;
 }
 
 h3 {
-  font-size: 1.8rem;
+  font-size: 2rem;
+  margin-bottom: 15px;
 }
 
 p {
@@ -103,45 +93,52 @@ p {
 /* Afegeix aquí els estils del header i nav */
 
 header {
-  background-color: var(--secondary-color);
-  padding: 15px 40px;
-  border-bottom: 4px solid var(--primary-color);
   position: sticky;
   top: 0;
   z-index: 1000;
+  padding: 16px 40px;
+  background-color: var(--secondary-color);
+  border-bottom: 3px solid var(--primary-color);
 }
 
 nav {
-  max-width: 1200px;
+  max-width: 1250px;
   margin: 0 auto;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .logo img {
-  width: 120px;
-  height: auto;
+  width: 95px;
+  height: 95px;
   display: block;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--primary-color);
 }
 
 .nav-menu {
   display: flex;
-  gap: 30px;
+  align-items: center;
+  gap: 38px;
+
   margin: 0;
   padding: 0;
+
   list-style: none;
 }
 
 .nav-menu a {
   color: var(--text-color);
   text-decoration: none;
-  font-weight: bold;
+  font-size: 1rem;
+  font-weight: 800;
 }
 
 .nav-menu a:hover {
   color: var(--primary-color);
-  text-decoration: underline;
 }
 
 
@@ -152,27 +149,39 @@ nav {
 /* Afegeix aquí els estils de la secció hero */
 
 .hero {
-  min-height: 600px;
-  padding: 100px 20px;
-  text-align: center;
-  background-color: var(--surface-color);
+  min-height: 700px;
+  padding: 100px 25px;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background-color: var(--primary-color);
+  border-bottom: 8px solid var(--accent-color);
 }
 
 .hero h1 {
-  max-width: 900px;
-  margin: 0 auto 25px;
-  font-size: 4.5rem;
+  max-width: 1050px;
+  margin: 0 auto 30px;
+
+  color: var(--primary-color);
+  font-size: 5.5rem;
+  line-height: 0.95;
+  letter-spacing: 2px;
+
+  -webkit-text-stroke: 2px var(--white);
 }
 
 .hero p {
-  max-width: 650px;
-  margin: 0 auto 30px;
+  max-width: 680px;
+  margin: 0 auto 35px;
+
+  color: var(--secondary-color);
   font-size: 1.2rem;
+  font-weight: 600;
 }
 
 
@@ -184,21 +193,26 @@ nav {
 
 .btn-primary {
   display: inline-block;
-  padding: 14px 30px;
-  background-color: var(--primary-color);
+
+  padding: 15px 34px;
+
+  background-color: var(--accent-color);
   color: var(--white);
-  border: 2px solid var(--primary-color);
-  border-radius: 6px;
+
+  border: 2px solid var(--accent-color);
+  border-radius: 30px;
+
   text-decoration: none;
   font: inherit;
-  font-weight: bold;
+  font-weight: 800;
+
   cursor: pointer;
 }
 
 .btn-primary:hover {
-  background-color: var(--dark-color);
-  border-color: var(--dark-color);
-  transform: translateY(-2px);
+  background-color: var(--white);
+  color: var(--primary-color);
+  border-color: var(--white);
 }
 
 
@@ -209,23 +223,34 @@ nav {
 /* Afegeix aquí els estils de .about */
 
 .about {
-  padding: 80px 20px;
+  padding: 110px 25px;
+
   text-align: center;
+
   background-color: var(--secondary-color);
-  border-top: 4px solid var(--primary-color);
-  border-bottom: 4px solid var(--primary-color);
+  border-bottom: 3px solid var(--accent-color);
+}
+
+.about h2 {
+  color: var(--primary-color);
 }
 
 .about p {
   max-width: 950px;
   margin: 0 auto;
-  padding: 35px;
+
+  padding: 45px;
+
   text-align: left;
+
   background-color: var(--surface-color);
-  border-left: 6px solid var(--accent-color);
-  border-right: 6px solid var(--primary-color);
-  border-radius: 10px;
-  line-height: 1.8;
+
+  border-left: 8px solid var(--primary-color);
+  border-radius: 16px;
+
+  line-height: 1.85;
+
+  box-shadow: 0 10px 30px rgba(97, 16, 16, 0.12);
 }
 
 .about strong {
@@ -240,57 +265,74 @@ nav {
 /* Afegeix aquí els estils de .menu-highlight i .dish-card */
 
 .menu-highlight {
-  padding: 80px 20px;
+  padding: 110px 25px;
+
   text-align: center;
+
   background-color: var(--background-color);
 }
 
 .dishes {
-  max-width: 1100px;
-  margin: 40px auto 0;
+  max-width: 1200px;
+  margin: 55px auto 0;
 
   display: flex;
-  gap: 30px;
+  gap: 35px;
 }
 
 .dish-card {
   flex: 1;
-  padding: 25px;
-  background-color: var(--surface-color);
-  border: 2px solid var(--primary-color);
-  border-radius: 12px;
-  box-shadow: 6px 6px 0 var(--accent-color);
+
+  padding: 20px;
+
   display: flex;
   flex-direction: column;
+
+  background-color: var(--surface-color);
+
+  border: 2px solid var(--secondary-color);
+  border-radius: 18px;
+
+  box-shadow: 0 10px 25px rgba(97, 16, 16, 0.15);
+}
+
+.dish-card h3 {
+  color: var(--primary-color);
 }
 
 .dish-card img {
   width: 100%;
-  height: 250px;
-  object-fit: contain;
+  height: 270px;
+
+  object-fit: cover;
+
   background-color: var(--background-color);
-  border-radius: 8px;
+
+  border-radius: 12px;
 }
 
 .dish-card p {
   margin: 20px 0;
+
+  font-size: 1rem;
 }
 
 .dish-card:hover {
   border-color: var(--accent-color);
-  box-shadow: 8px 8px 0 var(--primary-color);
-  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(97, 16, 16, 0.22);
+  transform: translateY(-6px);
 }
 
 .price {
   display: block;
+
   margin-top: auto;
   padding-top: 15px;
 
   color: var(--primary-color);
 
-  font-size: 1.4rem;
-  font-weight: bold;
+  font-size: 1.6rem;
+  font-weight: 900;
 }
 
 
@@ -301,51 +343,76 @@ nav {
 /* Afegeix aquí els estils del formulari */
 
 .reservation {
-  padding: 80px 20px;
+  padding: 110px 25px;
+
   text-align: center;
+
   background-color: var(--secondary-color);
-  border-top: 4px solid var(--primary-color);
+
+  border-top: 3px solid var(--accent-color);
+}
+
+.reservation h2 {
+  color: var(--primary-color);
 }
 
 .reservation form {
-  max-width: 500px;
+  max-width: 550px;
   margin: 0 auto;
-  padding: 30px;
+
+  padding: 45px;
+
   text-align: left;
+
   background-color: var(--surface-color);
+
   border: 2px solid var(--primary-color);
-  border-radius: 12px;
-  box-shadow: 6px 6px 0 var(--accent-color);
+  border-radius: 18px;
+
+  box-shadow: 0 12px 30px rgba(97, 16, 16, 0.15);
 }
 
 .reservation label {
   display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
+
+  margin-bottom: 7px;
+
+  color: var(--dark-color);
+
+  font-weight: 800;
 }
 
 .reservation input,
 .reservation select {
   width: 100%;
-  padding: 12px;
-  margin-bottom: 18px;
+
+  padding: 14px 15px;
+  margin-bottom: 22px;
+
   background-color: var(--white);
-  border: 2px solid var(--dark-color);
-  border-radius: 6px;
+
+  border: 2px solid var(--background-color);
+  border-radius: 8px;
+
   color: var(--text-color);
+
   font: inherit;
 }
 
 .reservation input:focus,
 .reservation select:focus {
   outline: none;
+
   border-color: var(--accent-color);
+
+  background-color: var(--secondary-color);
 }
 
 .reservation .btn-primary {
   display: block;
   width: 100%;
-  margin-top: 10px;
+
+  margin-top: 12px;
 }
 
 
@@ -356,13 +423,87 @@ nav {
 /* Afegeix aquí els estils del footer */
 
 footer {
-  padding: 30px 20px;
+  padding: 40px 20px;
+
   text-align: center;
+
   background-color: var(--dark-color);
+
   color: var(--secondary-color);
+
   border-top: 5px solid var(--accent-color);
 }
 
 footer p {
-  margin: 5px 0;
+  margin: 7px 0;
+}
+
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+
+  header {
+    padding: 15px 20px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .logo img {
+    width: 75px;
+    height: 75px;
+  }
+
+  .nav-menu {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    min-height: 600px;
+    padding: 80px 20px;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+    -webkit-text-stroke: 1px var(--white);
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .about,
+  .menu-highlight,
+  .reservation {
+    padding: 75px 20px;
+  }
+
+  h2 {
+    font-size: 2.8rem;
+  }
+
+  .dishes {
+    flex-direction: column;
+    max-width: 500px;
+  }
+
+  .dish-card img {
+    height: 240px;
+  }
+
+  .about p {
+    padding: 25px;
+  }
+
+  .reservation form {
+    padding: 25px;
+  }
+
 }
