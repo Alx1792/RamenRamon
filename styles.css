@@ -49,36 +49,34 @@ body {
 /* ============================================
    TIPOGRAFIA
    ============================================ */
-    /*Exemple de com fer anar les variables*/
-   h1{ 
-    color: var(--primary-color);
-   }
+
+/*Exemple de com fer anar les variables*/
+h1 {
+  color: var(--primary-color);
+}
 
 /* Afegeix aquí els estils per h1, h2, h3, p, etc. */
 
 h1,
 h2,
 h3 {
-  font-family: "Bebas Neue", sans-serif;
   margin-top: 0;
-  color: var(--primary-color);
+  font-family: "Bebas Neue", sans-serif;
   letter-spacing: 1px;
 }
 
 h1 {
-  font-size: 5rem;
-  line-height: 1;
+  font-size: 5.5rem;
+  line-height: 0.95;
 }
 
 h2 {
   font-size: 3.5rem;
   line-height: 1;
-  margin-bottom: 40px;
 }
 
 h3 {
   font-size: 2rem;
-  margin-bottom: 15px;
 }
 
 p {
@@ -96,13 +94,17 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  padding: 16px 40px;
+
+  padding: 12px 40px;
+
   background-color: var(--secondary-color);
+
   border-bottom: 3px solid var(--primary-color);
 }
 
 nav {
   max-width: 1250px;
+  min-height: 80px;
   margin: 0 auto;
 
   display: flex;
@@ -111,18 +113,21 @@ nav {
 }
 
 .logo img {
-  width: 95px;
-  height: 95px;
+  width: 82px;
+  height: 82px;
+
   display: block;
+
   object-fit: cover;
-  border-radius: 50%;
+
   border: 3px solid var(--primary-color);
+  border-radius: 50%;
 }
 
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 38px;
+  gap: 35px;
 
   margin: 0;
   padding: 0;
@@ -132,7 +137,9 @@ nav {
 
 .nav-menu a {
   color: var(--text-color);
+
   text-decoration: none;
+
   font-size: 1rem;
   font-weight: 800;
 }
@@ -149,7 +156,7 @@ nav {
 /* Afegeix aquí els estils de la secció hero */
 
 .hero {
-  min-height: 700px;
+  min-height: 720px;
   padding: 100px 25px;
 
   display: flex;
@@ -160,26 +167,29 @@ nav {
   text-align: center;
 
   background-color: var(--primary-color);
-  border-bottom: 8px solid var(--accent-color);
+
+  border-bottom: 12px solid var(--accent-color);
 }
 
 .hero h1 {
-  max-width: 1050px;
+  max-width: 1100px;
   margin: 0 auto 30px;
 
   color: var(--primary-color);
+
   font-size: 5.5rem;
-  line-height: 0.95;
+  line-height: 0.9;
   letter-spacing: 2px;
 
   -webkit-text-stroke: 2px var(--white);
 }
 
 .hero p {
-  max-width: 680px;
+  max-width: 650px;
   margin: 0 auto 35px;
 
   color: var(--secondary-color);
+
   font-size: 1.2rem;
   font-weight: 600;
 }
@@ -194,15 +204,16 @@ nav {
 .btn-primary {
   display: inline-block;
 
-  padding: 15px 34px;
+  padding: 15px 35px;
 
   background-color: var(--accent-color);
   color: var(--white);
 
   border: 2px solid var(--accent-color);
-  border-radius: 30px;
+  border-radius: 6px;
 
   text-decoration: none;
+
   font: inherit;
   font-weight: 800;
 
@@ -210,9 +221,9 @@ nav {
 }
 
 .btn-primary:hover {
-  background-color: var(--white);
-  color: var(--primary-color);
-  border-color: var(--white);
+  background-color: var(--primary-color);
+  color: var(--white);
+
 }
 
 
@@ -223,34 +234,38 @@ nav {
 /* Afegeix aquí els estils de .about */
 
 .about {
-  padding: 110px 25px;
-
-  text-align: center;
+  padding: 120px 25px;
 
   background-color: var(--secondary-color);
-  border-bottom: 3px solid var(--accent-color);
+
+  border-bottom: 2px solid var(--accent-color);
 }
 
 .about h2 {
+  max-width: 1050px;
+  margin: 0 auto 35px;
+
   color: var(--primary-color);
+
+  font-size: 4rem;
 }
 
 .about p {
-  max-width: 950px;
+  max-width: 1050px;
   margin: 0 auto;
 
   padding: 45px;
 
-  text-align: left;
-
   background-color: var(--surface-color);
 
-  border-left: 8px solid var(--primary-color);
-  border-radius: 16px;
+  border-top: 6px solid var(--primary-color);
+  border-radius: 0 0 18px 18px;
 
-  line-height: 1.85;
+  text-align: left;
 
-  box-shadow: 0 10px 30px rgba(97, 16, 16, 0.12);
+  line-height: 1.9;
+
+  box-shadow: 0 12px 30px rgba(97, 16, 16, 0.12);
 }
 
 .about strong {
@@ -265,38 +280,46 @@ nav {
 /* Afegeix aquí els estils de .menu-highlight i .dish-card */
 
 .menu-highlight {
-  padding: 110px 25px;
-
-  text-align: center;
+  padding: 120px 25px;
 
   background-color: var(--background-color);
+
+  text-align: center;
+}
+
+.menu-highlight h2 {
+  color: var(--dark-color);
+
+  font-size: 4rem;
 }
 
 .dishes {
   max-width: 1200px;
-  margin: 55px auto 0;
+  margin: 60px auto 0;
 
   display: flex;
-  gap: 35px;
+  gap: 28px;
 }
 
 .dish-card {
   flex: 1;
 
-  padding: 20px;
+  padding: 18px;
 
   display: flex;
   flex-direction: column;
 
   background-color: var(--surface-color);
 
-  border: 2px solid var(--secondary-color);
-  border-radius: 18px;
+  border: 3px solid var(--primary-color);
+  border-radius: 6px;
 
-  box-shadow: 0 10px 25px rgba(97, 16, 16, 0.15);
+  box-shadow: 8px 8px 0 var(--accent-color);
 }
 
 .dish-card h3 {
+  margin-bottom: 15px;
+
   color: var(--primary-color);
 }
 
@@ -306,21 +329,23 @@ nav {
 
   object-fit: cover;
 
-  background-color: var(--background-color);
+  border-radius: 4px;
 
-  border-radius: 12px;
+  background-color: var(--background-color);
 }
 
 .dish-card p {
-  margin: 20px 0;
+  margin: 20px 5px;
 
   font-size: 1rem;
 }
 
 .dish-card:hover {
-  border-color: var(--accent-color);
-  box-shadow: 0 14px 30px rgba(97, 16, 16, 0.22);
-  transform: translateY(-6px);
+  border-color: var(--dark-color);
+
+  box-shadow: 11px 11px 0 var(--primary-color);
+
+  transform: translate(-3px, -3px);
 }
 
 .price {
@@ -331,7 +356,7 @@ nav {
 
   color: var(--primary-color);
 
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   font-weight: 900;
 }
 
@@ -343,33 +368,34 @@ nav {
 /* Afegeix aquí els estils del formulari */
 
 .reservation {
-  padding: 110px 25px;
+  padding: 120px 25px;
+
+  background-color: var(--dark-color);
 
   text-align: center;
 
-  background-color: var(--secondary-color);
-
-  border-top: 3px solid var(--accent-color);
+  border-top: 10px solid var(--accent-color);
 }
 
 .reservation h2 {
-  color: var(--primary-color);
+  color: var(--secondary-color);
+
+  font-size: 4rem;
 }
 
 .reservation form {
-  max-width: 550px;
-  margin: 0 auto;
+  max-width: 580px;
+  margin: 45px auto 0;
 
   padding: 45px;
 
-  text-align: left;
+  background-color: var(--secondary-color);
 
-  background-color: var(--surface-color);
-
-  border: 2px solid var(--primary-color);
   border-radius: 18px;
 
-  box-shadow: 0 12px 30px rgba(97, 16, 16, 0.15);
+  text-align: left;
+
+  box-shadow: 12px 12px 0 var(--accent-color);
 }
 
 .reservation label {
@@ -391,8 +417,8 @@ nav {
 
   background-color: var(--white);
 
-  border: 2px solid var(--background-color);
-  border-radius: 8px;
+  border: 2px solid var(--dark-color);
+  border-radius: 6px;
 
   color: var(--text-color);
 
@@ -405,14 +431,13 @@ nav {
 
   border-color: var(--accent-color);
 
-  background-color: var(--secondary-color);
+  background-color: var(--surface-color);
 }
 
 .reservation .btn-primary {
-  display: block;
   width: 100%;
 
-  margin-top: 12px;
+  margin-top: 10px;
 }
 
 
@@ -423,13 +448,13 @@ nav {
 /* Afegeix aquí els estils del footer */
 
 footer {
-  padding: 40px 20px;
+  padding: 45px 20px;
 
-  text-align: center;
-
-  background-color: var(--dark-color);
+  background-color: var(--text-color);
 
   color: var(--secondary-color);
+
+  text-align: center;
 
   border-top: 5px solid var(--accent-color);
 }
@@ -446,17 +471,17 @@ footer p {
 @media (max-width: 768px) {
 
   header {
-    padding: 15px 20px;
+    padding: 12px 20px;
   }
 
   nav {
     flex-direction: column;
-    gap: 18px;
+    gap: 15px;
   }
 
   .logo img {
-    width: 75px;
-    height: 75px;
+    width: 70px;
+    height: 70px;
   }
 
   .nav-menu {
@@ -482,11 +507,17 @@ footer p {
   .about,
   .menu-highlight,
   .reservation {
-    padding: 75px 20px;
+    padding: 80px 20px;
   }
 
-  h2 {
-    font-size: 2.8rem;
+  .about h2,
+  .menu-highlight h2,
+  .reservation h2 {
+    font-size: 3rem;
+  }
+
+  .about p {
+    padding: 25px;
   }
 
   .dishes {
@@ -498,12 +529,9 @@ footer p {
     height: 240px;
   }
 
-  .about p {
-    padding: 25px;
-  }
-
   .reservation form {
     padding: 25px;
+    box-shadow: 7px 7px 0 var(--accent-color);
   }
 
 }
